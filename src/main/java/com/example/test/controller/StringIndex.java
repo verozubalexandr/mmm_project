@@ -1,5 +1,8 @@
 package com.example.test.controller;
 
+/**
+ * Класс для десериализации объекта, содержащего индекс
+ */
 public class StringIndex {
     private int id;
 

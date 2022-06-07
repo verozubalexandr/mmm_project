@@ -1,6 +1,9 @@
 
 package com.example.test.controller;
 
+/**
+ * Класс для десериализации объекта содержащего все поля сущности бд и индекс в самой бд
+ */
 public class StringIndexObject {
     private String name;
     private String lastName;

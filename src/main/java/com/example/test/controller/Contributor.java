@@ -1,5 +1,8 @@
 package com.example.test.controller;
 
+/**
+ * Класс сущности базы данных
+ */
 public class Contributor {
     private String name;
     private String lastName;

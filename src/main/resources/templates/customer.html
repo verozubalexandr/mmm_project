@@ -12,30 +12,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="modal-overlay hide-modal">
-        <div class="modal-request-text">
-            Do you really want to delete this information?
-        </div>
-        <div class="button-wrapper">
-            <button class="customer-delete-confirm">Delete</button>
-            <button class="customer-delete-discard">Cancel</button>
-        </div>
+<div class="modal-overlay hide-modal">
+    <div class="modal-request-text">
+        Do you really want to delete this information?
     </div>
-    <div class="status-overlay hide-status">
-        <span class="success-message">Success!</span>
-        <span class="error-message">Error :(</span>
-        <button class="status-seen">OK</button>
+    <div class="button-wrapper">
+        <button class="customer-delete-confirm">Delete</button>
+        <button class="customer-delete-discard">Cancel</button>
     </div>
-    <div class="container">
-        <h2 class="customer-title">Contributor's info</h2>
-        <div class="item"></div>
-        <div class="btn-wrapper">
-            <button class="customer-delete">Delete</button>
-            <button class="customer-edit">Edit</button>
-        </div>
-        <a href="/admin" id="home-link">Home</a>
+</div>
+<div class="status-overlay hide-status">
+    <span class="success-message">Success!</span>
+    <span class="error-message">Error :(</span>
+    <button class="status-seen">OK</button>
+</div>
+<div class="container">
+    <h2 class="customer-title">Contributor's info</h2>
+    <div class="item"></div>
+    <div class="btn-wrapper">
+        <button class="customer-delete">Delete</button>
+        <button class="customer-edit">Edit</button>
     </div>
-    <span id="db-info" class="hide" th:text="${dbObject}"/>
-    <script src="../static/js/search.js" th:src="@{/js/customer.js}"></script>
+    <a href="/admin" id="home-link">Home</a>
+</div>
+<span id="db-info" class="hide" th:text="${dbObject}"/>
+<script src="../static/js/search.js" th:src="@{/js/customer.js}"></script>
 </body>
 </html>

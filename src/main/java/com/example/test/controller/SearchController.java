@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.io.IOException;
 
+/**
+ * Возвращаем страницу поиска, вместе с бд в строковом виде
+ */
 @Controller
 public class SearchController {
     @GetMapping(value = "/search")

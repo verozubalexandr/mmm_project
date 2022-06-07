@@ -12,6 +12,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+/**
+ * Создаем пользователя с паролем, который находится во внешнем файле, и именем "admin"
+ * Запрашиваем пароль при любом запросе на сайт кроме текущей сессии
+ */
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {

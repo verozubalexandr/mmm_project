@@ -12,66 +12,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="status-overlay hide-status">
-        <span class="success-message">Success!</span>
-        <span class="error-message">Error :(</span>
-        <button class="status-seen">OK</button>
-    </div>
-    <div class="container">
-        <h2 class="edit-title">Edit Contributor's info</h2>
+<div class="status-overlay hide-status">
+    <span class="success-message">Success!</span>
+    <span class="error-message">Error :(</span>
+    <button class="status-seen">OK</button>
+</div>
+<div class="container">
+    <h2 class="edit-title">Edit Contributor's info</h2>
 
-        <div class="inputs-wrapper">
-            <label>
-                <span>Name:</span>
-                <input id="name-edit">
-            </label>
-            <label>
-                <span>Patronymic:</span>
-                <input id="patronymic-edit">
-            </label>
-            <label>
-                <span>Lastname:</span>
-                <input id="last-name-edit">
-            </label>
-            <label>
-                <span>City:</span>
-                <input id="city-edit">
-            </label>
-            <label>
-                <span>Street:</span>
-                <input id="street-edit">
-            </label>
-            <label>
-                <span>House number:</span>
-                <input id="house-number-edit">
-            </label>
-            <label>
-                <span>Apartment number:</span>
-                <input id="apartment-number-edit">
-            </label>
-            <label for="auto-prolongation-edit">
-                <span>Auto prolongation:</span>
-                <div class="switch-box">
-                    <input type="checkbox" id="auto-prolongation-edit" class="switch">
-                </div>
-            </label>
-            <label>
-                <span>Deposit:</span>
-                <input id="deposit-edit">
-            </label>
-            <label>
-                <span>Contract number:</span>
-                <input id="contract-number-edit">
-            </label>
-            <label>
-                <span>Term:</span>
-                <input id="term-edit">
-            </label>
-        </div>
-
-        <button class="customer-save">Save</button>
+    <div class="inputs-wrapper">
+        <label>
+            <span>Name:</span>
+            <input id="name-edit">
+        </label>
+        <label>
+            <span>Patronymic:</span>
+            <input id="patronymic-edit">
+        </label>
+        <label>
+            <span>Lastname:</span>
+            <input id="last-name-edit">
+        </label>
+        <label>
+            <span>City:</span>
+            <input id="city-edit">
+        </label>
+        <label>
+            <span>Street:</span>
+            <input id="street-edit">
+        </label>
+        <label>
+            <span>House number:</span>
+            <input id="house-number-edit">
+        </label>
+        <label>
+            <span>Apartment number:</span>
+            <input id="apartment-number-edit">
+        </label>
+        <label for="auto-prolongation-edit">
+            <span>Auto prolongation:</span>
+            <div class="switch-box">
+                <input type="checkbox" id="auto-prolongation-edit" class="switch">
+            </div>
+        </label>
+        <label>
+            <span>Deposit:</span>
+            <input id="deposit-edit">
+        </label>
+        <label>
+            <span>Contract number:</span>
+            <input id="contract-number-edit">
+        </label>
+        <label>
+            <span>Term:</span>
+            <input id="term-edit">
+        </label>
     </div>
-    <span id="db-info" class="hide" th:text="${dbObject}"/>
-    <script src="../static/js/search.js" th:src="@{/js/edit.js}"></script>
+
+    <button class="customer-save">Save</button>
+</div>
+<span id="db-info" class="hide" th:text="${dbObject}"/>
+<script src="../static/js/search.js" th:src="@{/js/edit.js}"></script>
 </body>
 </html>

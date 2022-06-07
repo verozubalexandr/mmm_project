@@ -2,22 +2,24 @@ package com.example.test.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.json.JSONException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Сохранение информации об обьекте
+ */
 @RestController
 @RequestMapping("/save")
 public class SaveController {
     @PostMapping("/saved")
-    public String saveContributor(@RequestBody String info) throws JSONException, JsonProcessingException {
+    public String saveContributor(@RequestBody String info) throws JsonProcessingException {
         StringIndexObject obj = new ObjectMapper().readValue(info, StringIndexObject.class);
         DataBase contributors = new DataBase();
         contributors.load();
 
-        if(obj.getId() >= 0 && obj.getId() < contributors.getContributors().size()) {
+        if (obj.getId() >= 0 && obj.getId() < contributors.getContributors().size()) {
             contributors.getContributors().get(obj.getId()).setName(obj.getName());
             contributors.getContributors().get(obj.getId()).setLastName(obj.getLastName());
             contributors.getContributors().get(obj.getId()).setPatronymic(obj.getPatronymic());

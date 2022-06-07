@@ -21,26 +21,51 @@ public class DataBase {
         contributors = new ArrayList<Contributor>();
     }
 
+    /**
+     * Добавление элемента в конец бд
+     *
+     * @param contributor {Contributor}  — новый объект
+     * @Returns {boolean}
+     */
     public boolean add(Contributor contributor) {
         return contributors.add(contributor);
     }
 
+    /**
+     * Удаляем элемент из базы данных по индексу
+     *
+     * @param index {int}  — индекс элемента в бд
+     * @Returns {boolean}
+     */
     public boolean remove(int index) {
         Contributor contributor = contributors.get(index);
         return contributors.remove(contributor);
     }
 
+    /**
+     * Получаем элемент своего класса из базы данных по индексу
+     *
+     * @param index {int}  — индекс элемента в бд
+     * @Returns {Contributor}
+     */
     public Contributor getContributor(int index) {
         return contributors.get(index);
     }
 
+    /**
+     * Возвращаем бд в виде списка объектов
+     *
+     * @Returns {List<Contributor>}
+     */
     public List<Contributor> getContributors() {
         return contributors;
     }
 
+    /**
+     * Выгружаем базу данных из вешнего файла
+     */
     public void load() {
         this.clear();
-
         try {
             Reader reader = Files.newBufferedReader(Paths.get("./src/main/resources/client-db.json"));
             this.contributors = new Gson().fromJson(reader, new TypeToken<List<Contributor>>() {
@@ -51,11 +76,20 @@ public class DataBase {
         }
     }
 
+    /**
+     * Возвращаем элемент бд по указанному индеку в виде строки json
+     *
+     * @param index {int}  — индекс элемента в бд
+     * @Returns {String}
+     */
     public String databaseObjectToJsonString(int index) {
         Gson gson = new Gson();
         return gson.toJson(contributors.get(index));
     }
 
+    /**
+     * Загружаеем базу данных из внешнего файла
+     */
     public void save() {
         Gson gson = new GsonBuilder().create();
         JsonArray json = gson.toJsonTree(contributors).getAsJsonArray();
@@ -67,6 +101,9 @@ public class DataBase {
         }
     }
 
+    /**
+     * Возвращаем всю базу данных в виде строки json
+     */
     public static String getStringDatabase() throws IOException {
         Path file = Paths.get("./src/main/resources/client-db.json");
         List<String> lines = Files.readAllLines(file);
@@ -77,6 +114,9 @@ public class DataBase {
         return json;
     }
 
+    /**
+     * Очищаем список объектов
+     */
     private void clear() {
         this.contributors.clear();
     }
