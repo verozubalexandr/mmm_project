@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Contributor</title>
+    <link type="Image/x-icon" th:href="@{/img/logo.ico}" rel="icon">
+    <link href="../static/css/search.css" th:href="@{/css/add.css}" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="status-overlay hide-status">
+        <span class="success-message">Success!</span>
+        <span class="error-message">Error :(</span>
+        <button class="status-seen">OK</button>
+    </div>
+    <div class="container">
+        <h2 class="add-title">Add Contributor</h2>
+
+        <div class="inputs-wrapper">
+            <label>
+                <span>Name:</span>
+                <input id="name-edit">
+            </label>
+            <label>
+                <span>Patronymic:</span>
+                <input id="patronymic-edit">
+            </label>
+            <label>
+                <span>Lastname:</span>
+                <input id="last-name-edit">
+            </label>
+            <label>
+                <span>City:</span>
+                <input id="city-edit">
+            </label>
+            <label>
+                <span>Street:</span>
+                <input id="street-edit">
+            </label>
+            <label>
+                <span>House number:</span>
+                <input id="house-number-edit">
+            </label>
+            <label>
+                <span>Apartment number:</span>
+                <input id="apartment-number-edit">
+            </label>
+            <label for="auto-prolongation-edit">
+                <span>Auto prolongation:</span>
+                <div class="switch-box">
+                    <input type="checkbox" id="auto-prolongation-edit" class="switch">
+                </div>
+            </label>
+            <label>
+                <span>Deposit:</span>
+                <input id="deposit-edit">
+            </label>
+            <label>
+                <span>Contract number:</span>
+                <input id="contract-number-edit">
+            </label>
+            <label>
+                <span>Term:</span>
+                <input id="term-edit">
+            </label>
+            <button class="customer-add" type="submit">Save</button>
+        </div>
+        <a href="/admin" id="home-link">Home</a>
+    </div>
+
+    <script src="../static/js/add.js" th:src="@{/js/add.js}"></script>
+</body>
+</html>

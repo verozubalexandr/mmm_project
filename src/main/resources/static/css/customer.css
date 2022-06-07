@@ -1,0 +1,230 @@
+.hide {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+span, a, div, p, button, h1, h2, h3, input, label, ul, li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.customer-title {
+    padding: 0;
+    text-align: center;
+    color: #000000;
+    font-size: 35px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 525px;
+    min-height: 600px;
+    margin: 0 auto;
+    border: 1px solid #adadad;
+    border-radius: 8px;
+}
+
+.data-type {
+    color: #adadad;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+.data-type .data-type-info {
+    color: #000000;
+}
+
+.btn-wrapper {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 525px;
+    margin: 23px auto;
+}
+
+.btn-wrapper button {
+    display: block;
+    background-color: transparent;
+    margin: 0;
+    height: 45px;
+    width: 250px;
+    outline: none;
+    border: 1px solid #3579f6;
+    border-radius: 8px;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000000;
+    transition: .3s all;
+}
+
+.btn-wrapper button:hover {
+    border-radius: 12px;
+    background-color: #3579f6;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+    transition: .2s all;
+}
+
+.modal-request-text {
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 35vh;
+    text-align: center;
+}
+
+.button-wrapper {
+    margin-top: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button-wrapper > button {
+    display: block;
+    background-color: transparent;
+    margin: 0 20px;
+    height: 40px;
+    width: 150px;
+    outline: none;
+    border: 1px solid #3579f6;
+    border-radius: 8px;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 300;
+    color: #ffffff;
+    transition: .3s all;
+}
+
+.button-wrapper > button:hover {
+    border-radius: 12px;
+    background-color: #3579f6;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.hide-modal {
+    top: -100%;
+}
+
+#home-link {
+    display: block;
+    width: 50px;
+    margin: 45px auto 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #adadad;
+    font-size: 14px;
+    transition: .3s all;
+}
+
+#home-link:hover {
+    color: #3579f6;
+}
+
+.status-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+    transition: .2s all;
+}
+
+.hide-status {
+    top: 100%;
+}
+
+.success-message {
+    display: block;
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 35vh;
+    text-align: center;
+}
+
+.error-message {
+    display: block;
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 35vh;
+    text-align: center;
+}
+
+.status-seen {
+    display: block;
+    background-color: transparent;
+    margin: 0 auto;
+    height: 40px;
+    width: 150px;
+    outline: none;
+    border: 1px solid #3579f6;
+    border-radius: 8px;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 300;
+    color: #ffffff;
+    transition: .3s all;
+}
+
+.status-seen:hover {
+    border-radius: 12px;
+    background-color: #3579f6;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 544px) {
+    .item {
+        width: 300px;
+    }
+
+    .item .data-type {
+        font-size: 11px;
+    }
+
+    .btn-wrapper {
+        width: 256px;
+        flex-wrap: wrap;
+    }
+
+    .btn-wrapper button {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .button-wrapper button {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
