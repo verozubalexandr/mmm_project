@@ -88,7 +88,7 @@ public class DataBase {
     }
 
     /**
-     * Загружаеем базу данных из внешнего файла
+     * Загружаеем базу данных во внешний файл
      */
     public void save() {
         Gson gson = new GsonBuilder().create();
